@@ -11,5 +11,9 @@ var Gray = "\033[37m"
 var White = "\033[97m"
 
 func Ize(color, message string) string {
+	return Colorize(color, message)
+}
+
+func Colorize(color, message string) string {
 	return color + message + Reset
 }
