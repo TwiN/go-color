@@ -1,6 +1,6 @@
 # go-color
 
-A lightweight, simple and cross-platform package to colorize text in terminals.
+An extremely lightweight, simple and cross-platform package to colorize text in terminals.
 
 
 ## Usage
@@ -17,6 +17,8 @@ import "github.com/TwinProduction/go-color"
 
 func main() {
     println(color.Red + "Something something something" + color.Reset)
+    // or
+    println(color.Ize(color.Red, "Something something something"))
 }
 ```
 
