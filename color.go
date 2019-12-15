@@ -12,10 +12,12 @@ var (
 	White  = "\033[97m"
 )
 
+// Ize is an alias for the Colorize function
 func Ize(color, message string) string {
 	return Colorize(color, message)
 }
 
+// Colorize wraps a given message in a given color.
 func Colorize(color, message string) string {
 	return color + message + Reset
 }

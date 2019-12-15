@@ -1,6 +1,12 @@
 # go-color
 
-An extremely lightweight, simple and cross-platform package to colorize text in terminals.
+An extremely lightweight cross-platform package to colorize text in terminals.
+
+This is not meant for maximal compatibility, nor is it meant to handle a plethora of scenarios.
+It will simply wrap a message with the necessary characters, if the OS handles it.
+
+There are many cases in which this would not work, such as the output being redirected to something other 
+than a terminal (such as a file, i.e. `executable >> file.txt`)
 
 
 ## Usage
