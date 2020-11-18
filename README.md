@@ -1,5 +1,7 @@
 # go-color
 
+![build](https://github.com/TwinProduction/go-color/workflows/build/badge.svg?branch=master)
+
 An extremely lightweight cross-platform package to colorize text in terminals.
 
 This is not meant for maximal compatibility, nor is it meant to handle a plethora of scenarios.
