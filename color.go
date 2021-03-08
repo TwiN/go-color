@@ -1,23 +1,32 @@
-package color
+package main
 
-var (
-	Reset  = "\033[0m"
-	Red    = "\033[31m"
-	Green  = "\033[32m"
-	Yellow = "\033[33m"
-	Blue   = "\033[34m"
-	Purple = "\033[35m"
-	Cyan   = "\033[36m"
-	Gray   = "\033[37m"
-	White  = "\033[97m"
-)
+import "runtime"
 
-// Ize is an alias for the Colorize function
-func Ize(color, message string) string {
-	return Colorize(color, message)
-}
+// Export colors
+var Reset = "\033[0m"
+var Red = "\033[31m"
+var Green = "\033[32m"
+var Yellow = "\033[33m"
+var Blue = "\033[34m"
+var Purple = "\033[35m"
+var Cyan = "\033[36m"
+var Gray = "\033[37m"
+var White = "\033[97m"
+var Bold = "\033[1m"
+var Orange = "\033[93m"
 
-// Colorize wraps a given message in a given color.
-func Colorize(color, message string) string {
-	return color + message + Reset
+func init() {
+	if runtime.GOOS == "windows" {
+		Reset = ""
+		Red = ""
+		Green = ""
+		Yellow = ""
+		Blue = ""
+		Purple = ""
+		Cyan = ""
+		Gray = ""
+		White = ""
+		Bold = ""
+		Orange = ""
+	}
 }
