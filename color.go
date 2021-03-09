@@ -2,6 +2,7 @@ package color
 
 var (
 	Reset  = "\033[0m"
+	Bold   = "\033[1m"
 	Red    = "\033[31m"
 	Green  = "\033[32m"
 	Yellow = "\033[33m"
@@ -10,8 +11,6 @@ var (
 	Cyan   = "\033[36m"
 	Gray   = "\033[37m"
 	White  = "\033[97m"
-	Bold   = "\033[1m"
-	Orange = "\033[93m"
 )
 
 // Ize is an alias for the Colorize function

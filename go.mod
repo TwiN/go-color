@@ -1,3 +1,3 @@
-module github.com/kawsark/go-color
+module github.com/TwinProduction/go-color
 
 go 1.15
