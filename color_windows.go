@@ -15,6 +15,7 @@ func init() {
 		// If it fails, fallback to no colors
 		if _, _, err := setConsoleModeProc.Call(uintptr(handle), 0x0001|0x0002|0x0004); err != nil && err.Error() != "The operation completed successfully." {
 			Reset = ""
+			Bold = ""
 			Red = ""
 			Green = ""
 			Yellow = ""
