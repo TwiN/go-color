@@ -1,6 +1,6 @@
 # go-color
 
-![build](https://github.com/TwinProduction/go-color/workflows/build/badge.svg?branch=master)
+![build](https://github.com/TwiN/go-color/workflows/build/badge.svg?branch=master)
 
 An extremely lightweight cross-platform package to colorize text in terminals.
 
@@ -20,7 +20,7 @@ in conjunction with a variable like so:
 ```go
 package main
 
-import "github.com/TwinProduction/go-color"
+import "github.com/TwiN/go-color"
 
 func main() {
     println(color.Ize(color.Red, "This is red"))
@@ -48,7 +48,7 @@ You can either directly use the variables like so:
 ```go
 package main
 
-import "github.com/TwinProduction/go-color"
+import "github.com/TwiN/go-color"
 
 func main() {
     println(color.Red + "This is red" + color.Reset)
@@ -69,5 +69,5 @@ otherwise everything else in your terminal will be that color until the color is
 ## Installation
 
 ```
-go get github.com/TwinProduction/go-color
+go get github.com/TwiN/go-color
 ```
