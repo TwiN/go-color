@@ -77,9 +77,9 @@ import "github.com/TwiN/go-color"
 func main() {
     println(color.Red + "This is red" + color.Reset)
     println(color.Green + "This is green" + color.Reset)
-	println(color.Yellow + "This is yellow" + color.Reset)
-	println(color.Blue + "This is blue" + color.Reset)
-	println(color.Purple + "This is purple" + color.Reset)
+    println(color.Yellow + "This is yellow" + color.Reset)
+    println(color.Blue + "This is blue" + color.Reset)
+    println(color.Purple + "This is purple" + color.Reset)
     println(color.Cyan + "This is cyan" + color.Reset)
     println(color.Gray + "This is gray" + color.Reset)
     println(color.White + "This is white" + color.Reset)
