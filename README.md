@@ -75,6 +75,7 @@ package main
 import "github.com/TwiN/go-color"
 
 func main() {
+    println(color.Bold + "This is bold" + color.Reset)
     println(color.Red + "This is red" + color.Reset)
     println(color.Green + "This is green" + color.Reset)
     println(color.Yellow + "This is yellow" + color.Reset)
