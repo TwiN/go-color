@@ -1,6 +1,6 @@
 # go-color
 
-![build](https://github.com/TwiN/go-color/workflows/test/badge.svg?branch=master)
+![test](https://github.com/TwiN/go-color/workflows/test/badge.svg?branch=master)
 
 An extremely lightweight cross-platform package to colorize text in terminals.
 
