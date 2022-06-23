@@ -11,26 +11,27 @@ There are many cases in which this would not work, such as the output being redi
 than a terminal (such as a file, i.e. `executable >> file.txt`)
 
 
-## Usage
+## Install
 
-```console
-go get github.com/TwiN/go-color
-```
+`go get github.com/TwiN/go-color`
 
 
-### Function
+### Usage
 
 You can use the `color.Colorize(color, message)` or `color.Ize(color, message)` function 
 in conjunction with a variable like so:
 ```go
 package main
 
-import "github.com/TwiN/go-color"
+import (
+    "github.com/TwiN/go-color"
+    "fmt"
+)
 
 func main() {
-    println(color.Ize(color.Red, "This is red"))
+    fmt.Println(color.Ize(color.Red, "This is red"))
     // Or if you prefer the longer version
-    println(color.Colorize(color.Red, "This is red"))
+    fmt.Println(color.Colorize(color.Red, "This is red"))
 }
 ```
 
@@ -46,18 +47,19 @@ Alternatively, you can use color-specific functions:
 ```go
 package main
 
-import "github.com/TwiN/go-color"
-
+import (
+   "github.com/TwiN/go-color"
+    "fmt"
 func main() {
-    println(color.InBold("This is bold"))
-    println(color.InRed("This is red"))
-    println(color.InGreen("This is green"))
-    println(color.InYellow("This is yellow"))
-    println(color.InBlue("This is blue"))
-    println(color.InPurple("This is purple"))
-    println(color.InCyan("This is cyan"))
-    println(color.InGray("This is gray"))
-    println(color.InWhite("This is white"))
+    fmt.Println(color.InBold("This is bold"))
+    fmt.Println(color.InRed("This is red"))
+    fmt.Println(color.InGreen("This is green"))
+    fmt.Println(color.InYellow("This is yellow"))
+    fmt.Println(color.InBlue("This is blue"))
+    fmt.Println(color.InPurple("This is purple"))
+    fmt.Println(color.InCyan("This is cyan"))
+    fmt.Println(color.InGray("This is gray"))
+    fmt.Println(color.InWhite("This is white"))
 }
 ```
 
@@ -72,18 +74,21 @@ You can either directly use the variables like so:
 ```go
 package main
 
-import "github.com/TwiN/go-color"
+import (
+    "github.com/TwiN/go-color"
+    "fmt"
+)
 
 func main() {
-    println(color.Bold + "This is bold" + color.Reset)
-    println(color.Red + "This is red" + color.Reset)
-    println(color.Green + "This is green" + color.Reset)
-    println(color.Yellow + "This is yellow" + color.Reset)
-    println(color.Blue + "This is blue" + color.Reset)
-    println(color.Purple + "This is purple" + color.Reset)
-    println(color.Cyan + "This is cyan" + color.Reset)
-    println(color.Gray + "This is gray" + color.Reset)
-    println(color.White + "This is white" + color.Reset)
+    fmt.Println(color.Bold + "This is bold" + color.Reset)
+    fmt.Println(color.Red + "This is red" + color.Reset)
+    fmt.Println(color.Green + "This is green" + color.Reset)
+    fmt.Println(color.Yellow + "This is yellow" + color.Reset)
+    fmt.Println(color.Blue + "This is blue" + color.Reset)
+    fmt.Println(color.Purple + "This is purple" + color.Reset)
+    fmt.Println(color.Cyan + "This is cyan" + color.Reset)
+    fmt.Println(color.Gray + "This is gray" + color.Reset)
+    fmt.Println(color.White + "This is white" + color.Reset)
 }
 ```
 
