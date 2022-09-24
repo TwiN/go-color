@@ -64,7 +64,7 @@ func main() {
 
 ### Variables only
 
-Unlike using the aforementioned approach, directly using the color variables will required you to manually
+Unlike using the aforementioned approach, directly using the color variables will require you to manually
 prepend `color.Reset` at the end of your string.
 
 You can either directly use the variables like so:
