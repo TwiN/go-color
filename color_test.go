@@ -4,6 +4,9 @@ import "testing"
 
 // Clearly not a real test - just a visual reference
 func TestOutput(t *testing.T) {
+	println(Bold + "Hello" + Reset)
+	println(Underline + "Hello" + Reset)
+	println(Black + "Hello" + Reset)
 	println(Red + "Hello" + Reset)
 	println(Green + "Hello" + Reset)
 	println(Yellow + "Hello" + Reset)
@@ -24,6 +27,14 @@ func TestColorize(t *testing.T) {
 		{
 			Color:          Bold,
 			ExpectedOutput: "\033[1mtest\033[0m",
+		},
+		{
+			Color:          Underline,
+			ExpectedOutput: "\033[4mtest\033[0m",
+		},
+		{
+			Color:          Black,
+			ExpectedOutput: "\033[30mtest\033[0m",
 		},
 		{
 			Color:          Red,
@@ -78,6 +89,16 @@ func TestIn(t *testing.T) {
 			Func:           InBold,
 			Color:          Bold,
 			ExpectedOutput: "\033[1mtest\033[0m",
+		},
+		{
+			Func:           InUnderline,
+			Color:          Underline,
+			ExpectedOutput: "\033[4mtest\033[0m",
+		},
+		{
+			Func:           InBlack,
+			Color:          Black,
+			ExpectedOutput: "\033[30mtest\033[0m",
 		},
 		{
 			Func:           InRed,
