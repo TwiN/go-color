@@ -1,22 +1,25 @@
 package color
 
 var (
-	Reset  = "\033[0m"
-	Bold   = "\033[1m"
-	Red    = "\033[31m"
-	Green  = "\033[32m"
-	Yellow = "\033[33m"
-	Blue   = "\033[34m"
-	Purple = "\033[35m"
-	Cyan   = "\033[36m"
-	Gray   = "\033[37m"
-	White  = "\033[97m"
+	Reset     = "\033[0m"
+	Bold      = "\033[1m"
+	Underline = "\033[4m"
+	Black     = "\033[30m"
+	Red       = "\033[31m"
+	Green     = "\033[32m"
+	Yellow    = "\033[33m"
+	Blue      = "\033[34m"
+	Purple    = "\033[35m"
+	Cyan      = "\033[36m"
+	Gray      = "\033[37m"
+	White     = "\033[97m"
 )
 
 // Ize is an alias for the Colorize function
 //
 // Example:
-//     println(color.Ize(color.Red, "This is red"))
+//
+//	println(color.Ize(color.Red, "This is red"))
 func Ize(color, s string) string {
 	return Colorize(color, s)
 }
@@ -24,7 +27,8 @@ func Ize(color, s string) string {
 // Colorize wraps a given message in a given color.
 //
 // Example:
-//     println(color.Colorize(color.Red, "This is red"))
+//
+//	println(color.Colorize(color.Red, "This is red"))
 func Colorize(color, s string) string {
 	return color + s + Reset
 }
@@ -32,15 +36,35 @@ func Colorize(color, s string) string {
 // InBold wraps the given string s in Bold
 //
 // Example:
-//     println(color.InBold("This is bold"))
+//
+//	println(color.InBold("This is bold"))
 func InBold(s string) string {
 	return Colorize(Bold, s)
+}
+
+// InUnderline wraps the given string s in Underline
+//
+// Example:
+//
+//	println(color.InUnderline("This is underlined"))
+func InUnderline(s string) string {
+	return Colorize(Underline, s)
+}
+
+// InBlack wraps the given string s in Black
+//
+// Example:
+//
+//	println(color.InBlack("This is black"))
+func InBlack(s string) string {
+	return Colorize(Black, s)
 }
 
 // InRed wraps the given string s in Red
 //
 // Example:
-//     println(color.InRed("This is red"))
+//
+//	println(color.InRed("This is red"))
 func InRed(s string) string {
 	return Colorize(Red, s)
 }
@@ -48,7 +72,8 @@ func InRed(s string) string {
 // InGreen wraps the given string s in Green
 //
 // Example:
-//     println(color.InGreen("This is green"))
+//
+//	println(color.InGreen("This is green"))
 func InGreen(s string) string {
 	return Colorize(Green, s)
 }
@@ -56,7 +81,8 @@ func InGreen(s string) string {
 // InYellow wraps the given string s in Yellow
 //
 // Example:
-//     println(color.InYellow("This is yellow"))
+//
+//	println(color.InYellow("This is yellow"))
 func InYellow(s string) string {
 	return Colorize(Yellow, s)
 }
@@ -64,7 +90,8 @@ func InYellow(s string) string {
 // InBlue wraps the given string s in Blue
 //
 // Example:
-//     println(color.InBlue("This is blue"))
+//
+//	println(color.InBlue("This is blue"))
 func InBlue(s string) string {
 	return Colorize(Blue, s)
 }
@@ -72,7 +99,8 @@ func InBlue(s string) string {
 // InPurple wraps the given string s in Purple
 //
 // Example:
-//     println(color.InPurple("This is purple"))
+//
+//	println(color.InPurple("This is purple"))
 func InPurple(s string) string {
 	return Colorize(Purple, s)
 }
@@ -80,7 +108,8 @@ func InPurple(s string) string {
 // InCyan wraps the given string s in Cyan
 //
 // Example:
-//     println(color.InCyan("This is cyan"))
+//
+//	println(color.InCyan("This is cyan"))
 func InCyan(s string) string {
 	return Colorize(Cyan, s)
 }
@@ -88,7 +117,8 @@ func InCyan(s string) string {
 // InGray wraps the given string s in Gray
 //
 // Example:
-//     println(color.InGray("This is gray"))
+//
+//	println(color.InGray("This is gray"))
 func InGray(s string) string {
 	return Colorize(Gray, s)
 }
@@ -96,7 +126,8 @@ func InGray(s string) string {
 // InWhite wraps the given string s in White
 //
 // Example:
-//     println(color.InWhite("This is white"))
+//
+//	println(color.InWhite("This is white"))
 func InWhite(s string) string {
 	return Colorize(White, s)
 }

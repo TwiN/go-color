@@ -29,8 +29,10 @@ import "github.com/TwiN/go-color"
 
 func main() {
     println(color.Ize(color.Red, "This is red"))
-    // Or if you prefer the longer version
+    // Or if you prefer the longer version:
     println(color.Colorize(color.Red, "This is red"))
+    // Or if you prefer the non-parameterized version:
+    println(color.InRed("This is red"))
 }
 ```
 
@@ -50,6 +52,8 @@ import "github.com/TwiN/go-color"
 
 func main() {
     println(color.InBold("This is bold"))
+    println(color.InUnderline("This is underlined"))
+    println(color.InBlack("This is black"))
     println(color.InRed("This is red"))
     println(color.InGreen("This is green"))
     println(color.InYellow("This is yellow"))
@@ -76,6 +80,8 @@ import "github.com/TwiN/go-color"
 
 func main() {
     println(color.Bold + "This is bold" + color.Reset)
+    println(color.Underline + "This is underlined" + color.Reset)
+    println(color.Black + "This is black" + color.Reset)
     println(color.Red + "This is red" + color.Reset)
     println(color.Green + "This is green" + color.Reset)
     println(color.Yellow + "This is yellow" + color.Reset)
