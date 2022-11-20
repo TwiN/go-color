@@ -20,7 +20,7 @@ go get github.com/TwiN/go-color
 
 ### Function
 
-You can use the `color.Colorize(color, message)` or `color.Ize(color, message)` function 
+You can use the `color.Colorize(color, str)`, the `color.Ize(color, string)`, or the `color.With(color, str)` function
 in conjunction with a variable like so:
 ```go
 package main
@@ -36,8 +36,8 @@ func main() {
 }
 ```
 
-Because I felt reading `color.Ize()` to be more visually pleasant than `color.Colorize()`, 
-I included `Ize()` as an alias for `Colorize()`.
+Because I felt reading `color.With()`/`color.Ize()` to be more visually pleasant than `color.Colorize()`, 
+I included `Ize()` and `With()` as an alias for `Colorize()`.
 
 I'm not usually a big fan of having two methods doing the same thing, but since
 this package doesn't have much room for growth (its only purpose is to colorize

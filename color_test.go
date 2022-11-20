@@ -52,6 +52,16 @@ func TestColorize(t *testing.T) {
 			if output != scenario.ExpectedOutput {
 				t.Errorf("expected %s, got %s", scenario.ExpectedOutput, output)
 			}
+			// Ize is an alias of Colorize, therefore the result should be the same
+			usingIze := Ize(scenario.Color, "test")
+			if usingIze != scenario.ExpectedOutput {
+				t.Errorf("expected %s, got %s", scenario.ExpectedOutput, usingIze)
+			}
+			// With is an alias of Colorize, therefore the result should be the same
+			usingWith := With(scenario.Color, "test")
+			if usingWith != scenario.ExpectedOutput {
+				t.Errorf("expected %s, got %s", scenario.ExpectedOutput, usingWith)
+			}
 		})
 	}
 }

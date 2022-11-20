@@ -48,6 +48,15 @@ func Ize(color, s string) string {
 	return Colorize(color, s)
 }
 
+// With is an alias for the Colorize function
+//
+// Example:
+//
+//	println(color.With(color.Red, "This is red"))
+func With(color, s string) string {
+	return Colorize(color, s)
+}
+
 // Colorize wraps a given message in a given color.
 //
 // Example:
