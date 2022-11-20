@@ -26,6 +26,15 @@ func init() {
 			Cyan = ""
 			Gray = ""
 			White = ""
+			BlackBackground = ""
+			RedBackground = ""
+			GreenBackground = ""
+			YellowBackground = ""
+			BlueBackground = ""
+			PurpleBackground = ""
+			CyanBackground = ""
+			GrayBackground = ""
+			WhiteBackground = ""
 		}
 	}
 }
