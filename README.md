@@ -79,6 +79,16 @@ color.InGreenOverBlue("This is green text on a blue background")
 ```
 Note that the example above is not exhaustive.
 
+#### Automatic coloring
+> ⚠ **WARNING**: This is an experimental feature and may be removed depending on user feedback.
+
+You may use `color.Autof(string, args...)` as a replacement to `fmt.Sprintf(string, args...)` but with colors for
+each argument:
+```go
+// 20 will be in red while "cookie jar" will be in green.
+println(color.Autof("I have $%.02f in my %s", 20, "cookie jar"))
+```
+
 
 ### Using Variables
 > ⚠ **WARNING**: By using this approach, you will not be able to disable colors with `color.Toggle(false)`. 
