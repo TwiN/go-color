@@ -81,6 +81,7 @@ Note that the example above is not exhaustive.
 
 #### Automatic coloring
 > ⚠ **WARNING**: This is an experimental feature and may be removed depending on user feedback.
+> If you have any feedback, please comment on [poll: Keep or Remove color.Autof?](https://github.com/TwiN/go-color/discussions/13).
 
 You may use `color.Autof(string, args...)` as a replacement to `fmt.Sprintf(string, args...)` but with colors for
 each argument:

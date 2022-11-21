@@ -10,7 +10,10 @@ var colorsToRotate = []string{
 }
 
 // Autof automatically colors the arguments given for a specific format.
-// Works exactly like fmt.Sprintf
+// Works exactly like fmt.Sprintf.
+//
+// WARNING: THIS IS AN EXPERIMENTAL FEATURE AND IT MAY BE REMOVED BASED ON USER FEEDBACK.
+// IF YOU USE THIS FEATURE, PLEASE PROVIDE FEEDBACK ON https://github.com/TwiN/go-color/discussions/13
 //
 // Example:
 //
