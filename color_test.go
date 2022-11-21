@@ -68,7 +68,7 @@ func TestColorize(t *testing.T) {
 
 func TestIn(t *testing.T) {
 	scenarios := []struct {
-		Func           func(string) string
+		Func           func(any) string
 		Name           string
 		ExpectedOutput string
 	}{
