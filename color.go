@@ -41,6 +41,18 @@ var (
 	WhiteBackground  = "\033[107m"
 )
 
+var (
+	enabled = true
+)
+
+// Toggle enables or disables color output
+//
+// Note that this does not apply if you are coloring by concatenating strings with color variables directly (e.g. color.Red+"Hello"+color.Reset).
+// Enabling/disabling coloring only applies to all functions (Colorize, Ize, With, InRed, OverRed, etc.)
+func Toggle(enable bool) {
+	enabled = enable
+}
+
 // Colorize wraps a given message in a given color.
 //
 // Example:
@@ -49,8 +61,14 @@ var (
 func Colorize(color string, s any) string {
 	switch s.(type) {
 	case string:
+		if !enabled {
+			return s.(string)
+		}
 		return color + s.(string) + Reset
 	default:
+		if !enabled {
+			return fmt.Sprint(s)
+		}
 		return color + fmt.Sprint(s) + Reset
 	}
 }
