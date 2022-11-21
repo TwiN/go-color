@@ -1,5 +1,4 @@
 # go-color
-
 ![test](https://github.com/TwiN/go-color/workflows/test/badge.svg?branch=master)
 
 An extremely lightweight cross-platform package to colorize text in terminals.
@@ -7,20 +6,15 @@ An extremely lightweight cross-platform package to colorize text in terminals.
 This is not meant for maximal compatibility, nor is it meant to handle a plethora of scenarios.
 It will simply wrap a message with the necessary characters, if the OS handles it.
 
-There are many cases in which this would not work, such as the output being redirected to something other 
-than a terminal (such as a file, i.e. `executable >> file.txt`)
-
 
 ## Usage
-
 ```console
 go get github.com/TwiN/go-color
 ```
 
 
-### Function
-
-You can use the `color.Colorize(color, str)`, the `color.Ize(color, string)`, or the `color.With(color, str)` function
+### Using Functions
+You can use the `color.Colorize(color, str)`, the `color.Ize(color, str)`, or the `color.With(color, str)` function
 in conjunction with a variable like so:
 ```go
 package main
@@ -28,16 +22,16 @@ package main
 import "github.com/TwiN/go-color"
 
 func main() {
+    // These all have the same effect:
+    println(color.With(color.Red, "This is red"))
     println(color.Ize(color.Red, "This is red"))
-    // Or if you prefer the longer version:
     println(color.Colorize(color.Red, "This is red"))
-    // Or if you prefer the non-parameterized version:
     println(color.InRed("This is red"))
 }
 ```
 
 Because I felt reading `color.With()`/`color.Ize()` to be more visually pleasant than `color.Colorize()`, 
-I included `Ize()` and `With()` as an alias for `Colorize()`.
+I included `Ize()` and `With()` as aliases for `Colorize()`.
 
 I'm not usually a big fan of having two methods doing the same thing, but since
 this package doesn't have much room for growth (its only purpose is to colorize
@@ -86,13 +80,14 @@ color.InGreenOverBlue("This is green text on a blue background")
 Note that the example above is not exhaustive.
 
 
-### Variables only
+### Using Variables
+> ⚠ **WARNING**: By using this approach, you will not be able to disable colors with `color.Toggle(false)`. 
+> Consider using the function approach instead for maximal cross-library compatibility.
 
 Unlike using the aforementioned approach, directly using the color variables will require you to manually
 prepend `color.Reset` at the end of your string.
 
-You can either directly use the variables like so:
-
+You can directly use the variables like so:
 ```go
 package main
 
@@ -115,3 +110,16 @@ func main() {
 
 **NOTE**: If you're going to use this approach, don't forget to prepend your string with `color.Reset`, 
 otherwise everything else in your terminal will be that color until the color is reset or overridden.
+
+
+### Disabling Colors
+You can disable colors by using `color.Toggle(false)`, which will cause all functions to not colorize the text.
+
+As mentioned in [Using Variables](#using-variables), disabling colors will have no effect on the variables, so 
+make sure you are using functions if you have a need to toggle colors.
+
+
+### Examples
+```go
+println("My name is " + color.InGreen("John Doe") + " and I have " + color.InRed(32) + " apples.")
+```

@@ -184,3 +184,20 @@ func TestIn(t *testing.T) {
 		})
 	}
 }
+
+func TestToggle(t *testing.T) {
+	Toggle(false)
+	if output := InRed("test"); output != "test" {
+		t.Errorf("Expected %s, got %s", "test", output)
+	}
+	if output := InRed(123); output != "123" {
+		t.Errorf("Expected %s, got %s", "test", output)
+	}
+	Toggle(true)
+	if output := InRed("test"); output != "\033[31mtest\033[0m" {
+		t.Errorf("Expected %s, got %s", "\033[31mtest\033[0m", output)
+	}
+	if output := InRed(123); output != "\033[31m123\033[0m" {
+		t.Errorf("Expected %s, got %s", "\033[31mtest\033[0m", output)
+	}
+}
