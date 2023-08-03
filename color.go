@@ -59,12 +59,12 @@ func Toggle(enable bool) {
 //
 //	println(color.Colorize(color.Red, "This is red"))
 func Colorize(color string, s any) string {
-	switch s.(type) {
+	switch s := s.(type) {
 	case string:
 		if !enabled {
-			return s.(string)
+			return s
 		}
-		return color + s.(string) + Reset
+		return color + s + Reset
 	default:
 		if !enabled {
 			return fmt.Sprint(s)
