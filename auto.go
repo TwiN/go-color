@@ -18,12 +18,11 @@ var colorsToRotate = []string{
 // Example:
 //
 //	println(Autof("Hello, %s.", "world"))
-func Autof(format string, a ...any) string {
-	if len(a) == 0 { // || Reset == ""
-		return fmt.Sprintf(format, a...)
+func Autof(format string, v ...any) string {
+	if len(v) == 0 { // || Reset == ""
+		return fmt.Sprintf(format, v...)
 	}
 	currentColorIndex, maxColorIndex := 0, len(colorsToRotate)-1
-	//var coloredFormat string
 	var insideSpecifier bool
 	formatLength := len(format)
 	var lastMergedIndex int
@@ -65,5 +64,5 @@ func Autof(format string, a ...any) string {
 	if lastMergedIndex < formatLength {
 		sb.WriteString(format[lastMergedIndex:])
 	}
-	return fmt.Sprintf(sb.String(), a...)
+	return fmt.Sprintf(sb.String(), v...)
 }
