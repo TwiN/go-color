@@ -1,5 +1,5 @@
 # go-color
-![test](https://github.com/TwiN/go-color/workflows/test/badge.svg?branch=master)
+![test](https://github.com/TwiN/go-color/actions/workflows/test.yml/badge.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/TwiN/go-color)](https://goreportcard.com/report/github.com/TwiN/go-color)
 [![Go version](https://img.shields.io/github/go-mod/go-version/TwiN/go-color.svg)](https://github.com/TwiN/go-color)
 [![Go Reference](https://pkg.go.dev/badge/github.com/TwiN/go-color.svg)](https://pkg.go.dev/github.com/TwiN/go-color)
